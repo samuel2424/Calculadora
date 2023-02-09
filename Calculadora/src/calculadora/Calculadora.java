@@ -29,9 +29,10 @@ public class Calculadora {
         Revisar revisar = new Revisar();
         boolean resp= revisar.Parentesis(oper);
         if(!resp)
-            resultado = "no están bien los paréntesis";
+            resultado = "no están bien los parénte sis";
         
         return resultado;
+        
     }
     
     
