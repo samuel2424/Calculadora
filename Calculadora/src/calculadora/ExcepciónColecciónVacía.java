@@ -9,9 +9,18 @@ package calculadora;
  * @author samuel
  */
 public class ExcepciónColecciónVacía extends RuntimeException{    
+
+    /**
+     *
+     */
     public ExcepciónColecciónVacía( ){        
         super("Colección vacía");    
     }   
+
+    /**
+     *
+     * @param mensaje
+     */
     public ExcepciónColecciónVacía(String mensaje){        
         super(mensaje);    
     }

@@ -8,6 +8,7 @@ package calculadora;
  *
  * @author samuel
  */
+
 public class PostFijo {
 
     
@@ -23,6 +24,13 @@ public class PostFijo {
         }
         return resultado;
     }
+    /** 
+     * PostFijo convierte un arreglo de cadenas en un arreglo de cadenas con notación postfija
+     * @param cadena[] es un arreglo de strings con la notación normañ
+     * @return <ul> 
+     *          <li>String[] devuelve un arreglo de datos tipo String con los elementos en notación postfija</li> 
+     *          </ul> 
+     */ 
     public static String[] PostFijo(String cadena[] ){
         String  post[] = new String[cadena.length];
         
@@ -65,7 +73,10 @@ public class PostFijo {
         return post;
     }
     
-    
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         String m = "2+432+31";
      

@@ -12,6 +12,14 @@ import static calculadora.Revisar.Arreglo;
  * @author samuel
  */
 public class Operar {
+    
+    /** 
+     * Operar suma los elementos 
+     * @param cadena es un arreglo de strings con la notación postfija
+     * @return <ul> 
+     *          <li>double: El resultado de la operación</li> 
+     *          </ul> 
+     */ 
     public static double Operar(String cadena[] ){
         PilaADT <Double> pila = new PilaA();
         double operador1=0.0;
@@ -36,6 +44,8 @@ public class Operar {
                         break;
                     case "/": if (operador2 != 0)
                              resultado = operador1 / operador2;
+                    else
+                        throw new ExcepcionCero("Se dividió entre cero");
                              
                 }
                 pila.push(resultado);
@@ -44,6 +54,11 @@ public class Operar {
         }
         return pila.pop();
     }
+
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         String [] cadena=Arreglo("4+2");
         String [] cad = PostFijo(cadena);

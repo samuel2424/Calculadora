@@ -16,55 +16,69 @@ import static calculadora.PostFijo.PostFijo;
 import static calculadora.Revisar.Cadena;
 import java.util.Scanner;
 
+/**
+ *
+ * @author samuel
+ */
 public class Calculadora {
     private String oper;
-    
+   
     /**
-     * 
-     * <ul>
-     * <li>
-     * Los parámetros son:
-     * </li>
-     * </ul>
+     *
      */
-    
     public Calculadora(){
         boolean resp;
         
     }
+    /** 
+     * Calcular es la clase principal de la calculadora
+     * @param oper es una cadena con la operación que se quiere calcular
+     * @return <ul> 
+     *          <li>double: El resultado de la operación</li> 
+     *          </ul> 
+     */ 
     public String Calcular(String oper){
         String resultado = oper;
         double valorFinal;
+        boolean resp;
         String [] arregloResult = null;
         String [] valorPost = null;
         Revisar revisar = new Revisar();
-        boolean resp= revisar.Parentesis(oper);
-        if(!resp)
-            resultado = "no están bien los paréntesis";
         try{
-            arregloResult=revisar.Arreglo(resultado);
-            try{
-                arregloResult = PostFijo(arregloResult);
-                
+            resp= revisar.Parentesis(oper);
+            resp= revisar.Validar(oper);
+            if(resp)
                 try{
-                    valorFinal = Operar(arregloResult);
-                    resultado = String.valueOf(valorFinal);
+                    arregloResult=revisar.Arreglo(resultado);
+                    try{
+                        arregloResult = PostFijo(arregloResult);
+
+                        try{
+                            valorFinal = Operar(arregloResult);
+                            resultado = String.valueOf(valorFinal);
+                        }
+                        catch(Exception e){
+                            System.out.println("No funcionó la operación");
+                        }
+                    }catch(Exception e){
+                        System.out.println("No funcionó la conversión a postfijo");
+                    }
+                }catch(Exception e){
+                    System.out.println("No funcionó la conversión a arreglo de strings");
                 }
-                catch(Exception e){
-                    System.out.println("No funcionó la operación");
-                }
-            }catch(Exception e){
-                System.out.println("No funcionó la conversión a postfijo");
-            }
+            else
+                resultado="No están bien las entradas";
         }catch(Exception e){
-            System.out.println("No funcionó la conversión a arreglo de strings");
+            System.out.println("Ingrese carácteres válidos");
         }
        
-        return String.valueOf(resultado);
-        
+        return String.valueOf(resultado);   
     }
     
-    
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         String operacion;
         Scanner teclado = new Scanner(System.in);

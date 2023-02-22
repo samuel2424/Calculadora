@@ -7,10 +7,31 @@ package calculadora;
 /**
  *
  * @author samuel
+ * @param <T>
  */
 public interface PilaADT<T>{
+
+    /**
+     *
+     * @return
+     */
     public T pop( ); // Debe quitar el elemento que está en el tope y regresarlo.
+
+    /**
+     *
+     * @param dato
+     */
     public void push(T dato); // Agrega el dato en el tope de la pila.
+
+    /**
+     *
+     * @return
+     */
     public T peek( ); 
+
+    /**
+     *
+     * @return
+     */
     public boolean isEmpty( ); // Regresa true si la pila no tiene elementos.
 }

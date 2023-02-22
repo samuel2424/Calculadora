@@ -12,10 +12,18 @@ import java.util.ArrayList;
  */
 public class Revisar {
     
+    /**
+     *
+     */
     public Revisar(){
         
     }
     
+    /**
+     *
+     * @param cadena
+     * @return
+     */
     public boolean Parentesis(String cadena){
         PilaA pila = new PilaA();
         boolean resp = true;
@@ -45,9 +53,53 @@ public class Revisar {
         else{
             resp = false;
         }        
+        
+        
         return resp; 
     }
     
+    /**
+     *
+     * @param cadena
+     * @return
+     */
+    public boolean Validar(String cadena){
+        char op = '0';
+        boolean resp = true;
+        int i=0;
+        while(i<cadena.length() && resp){
+             if(cadena.charAt(i)>= '0' &&  cadena.charAt(i) <='9'){
+                 op = '0';
+             }
+             else{
+                if(cadena.charAt(i)== '+' ||  cadena.charAt(i) =='*' || cadena.charAt(i)== '/' || cadena.charAt(i)== '-'){
+                    
+                    if(op =='0')
+                        op = cadena.charAt(i);
+                    else
+                        resp = false;
+                }
+                
+                else{
+                    if(!(cadena.charAt(i)== '(') && !(cadena.charAt(i)== ')') )
+                        resp = false;
+                }
+                 
+             }
+                 
+             i++;
+        }
+        return resp;     
+    }
+    
+    /**
+     *
+     * @param cadena toma una cadena de datos que se quieren calcular
+     * @return 
+     * <ul>
+     *  <li>String[] una cadena de strings </li>
+     * </ul>
+     */
     public static String [] Arreglo(String cadena){
         ArrayList <String> arreglo = new ArrayList<String>();
         String [] ArregloFinal;
@@ -79,13 +131,22 @@ public class Revisar {
         return ArregloFinal;
     }
     
-  
+    /**
+     *
+     * @param arreglo convierte un arreglo a cadena
+     * @return
+     */
     public static String Cadena(String [] arreglo){
          String cad = "";
          for(int i =0; i<arreglo.length; i++)
              cad = cad+arreglo[i];
          return cad;
     }
+
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         String [] cad = Arreglo("2+2");
         for(int i =0; i<cad.length; i++){
