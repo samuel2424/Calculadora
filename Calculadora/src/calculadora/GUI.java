@@ -32,6 +32,23 @@ public class GUI extends javax.swing.JFrame {
         num2 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        tres = new javax.swing.JButton();
+        uno = new javax.swing.JButton();
+        cuatro = new javax.swing.JButton();
+        cinco = new javax.swing.JButton();
+        seis = new javax.swing.JButton();
+        siete = new javax.swing.JButton();
+        dos = new javax.swing.JButton();
+        parizq = new javax.swing.JButton();
+        ocho = new javax.swing.JButton();
+        cero = new javax.swing.JButton();
+        menos = new javax.swing.JToggleButton();
+        suma = new javax.swing.JToggleButton();
+        multiplicacion = new javax.swing.JToggleButton();
+        division = new javax.swing.JToggleButton();
+        borrar = new javax.swing.JToggleButton();
+        nueve1 = new javax.swing.JButton();
+        parder = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 0));
@@ -53,8 +70,8 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(48, 115, 84));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setBackground(new java.awt.Color(0, 102, 0));
+        jButton1.setForeground(new java.awt.Color(253, 244, 244));
         jButton1.setText("Calcular");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +82,159 @@ public class GUI extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(48, 115, 84));
         jLabel3.setText("Proyecto: Calculadora ");
+
+        tres.setBackground(new java.awt.Color(0, 102, 0));
+        tres.setForeground(new java.awt.Color(253, 244, 244));
+        tres.setText("3");
+        tres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tresActionPerformed(evt);
+            }
+        });
+
+        uno.setBackground(new java.awt.Color(0, 102, 0));
+        uno.setForeground(new java.awt.Color(253, 244, 244));
+        uno.setText("1");
+        uno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                unoActionPerformed(evt);
+            }
+        });
+
+        cuatro.setBackground(new java.awt.Color(0, 102, 0));
+        cuatro.setForeground(new java.awt.Color(253, 244, 244));
+        cuatro.setText("4");
+        cuatro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cuatroActionPerformed(evt);
+            }
+        });
+
+        cinco.setBackground(new java.awt.Color(0, 102, 0));
+        cinco.setForeground(new java.awt.Color(253, 244, 244));
+        cinco.setText("5");
+        cinco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cincoActionPerformed(evt);
+            }
+        });
+
+        seis.setBackground(new java.awt.Color(0, 102, 0));
+        seis.setForeground(new java.awt.Color(253, 244, 244));
+        seis.setText("6");
+        seis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seisActionPerformed(evt);
+            }
+        });
+
+        siete.setBackground(new java.awt.Color(0, 102, 0));
+        siete.setForeground(new java.awt.Color(253, 244, 244));
+        siete.setText("7");
+        siete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sieteActionPerformed(evt);
+            }
+        });
+
+        dos.setBackground(new java.awt.Color(0, 102, 0));
+        dos.setForeground(new java.awt.Color(253, 244, 244));
+        dos.setText("2");
+        dos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dosActionPerformed(evt);
+            }
+        });
+
+        parizq.setBackground(new java.awt.Color(0, 102, 0));
+        parizq.setForeground(new java.awt.Color(253, 244, 244));
+        parizq.setText("(");
+        parizq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                parizqActionPerformed(evt);
+            }
+        });
+
+        ocho.setBackground(new java.awt.Color(0, 102, 0));
+        ocho.setForeground(new java.awt.Color(253, 244, 244));
+        ocho.setText("8");
+        ocho.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ochoActionPerformed(evt);
+            }
+        });
+
+        cero.setBackground(new java.awt.Color(0, 102, 0));
+        cero.setForeground(new java.awt.Color(253, 244, 244));
+        cero.setText("0");
+        cero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ceroActionPerformed(evt);
+            }
+        });
+
+        menos.setBackground(new java.awt.Color(0, 102, 0));
+        menos.setForeground(new java.awt.Color(253, 244, 244));
+        menos.setText("-");
+        menos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menosActionPerformed(evt);
+            }
+        });
+
+        suma.setBackground(new java.awt.Color(0, 102, 0));
+        suma.setForeground(new java.awt.Color(253, 244, 244));
+        suma.setText("+");
+        suma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sumaActionPerformed(evt);
+            }
+        });
+
+        multiplicacion.setBackground(new java.awt.Color(0, 102, 0));
+        multiplicacion.setForeground(new java.awt.Color(253, 244, 244));
+        multiplicacion.setText("*");
+        multiplicacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplicacionActionPerformed(evt);
+            }
+        });
+
+        division.setBackground(new java.awt.Color(0, 102, 0));
+        division.setForeground(new java.awt.Color(253, 244, 244));
+        division.setText("/");
+        division.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divisionActionPerformed(evt);
+            }
+        });
+
+        borrar.setBackground(new java.awt.Color(0, 102, 0));
+        borrar.setForeground(new java.awt.Color(253, 244, 244));
+        borrar.setText("borrar");
+        borrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                borrarActionPerformed(evt);
+            }
+        });
+
+        nueve1.setBackground(new java.awt.Color(0, 102, 0));
+        nueve1.setForeground(new java.awt.Color(253, 244, 244));
+        nueve1.setText("9");
+        nueve1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nueve1ActionPerformed(evt);
+            }
+        });
+
+        parder.setBackground(new java.awt.Color(0, 102, 0));
+        parder.setForeground(new java.awt.Color(253, 244, 244));
+        parder.setText(")");
+        parder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                parderActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -77,17 +247,54 @@ public class GUI extends javax.swing.JFrame {
                         .addComponent(jLabel3))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(59, 59, 59)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(87, 87, 87)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(num2)
+                            .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(43, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(90, 90, 90)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(borrar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(112, 112, 112))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton1)
+                            .addComponent(cero, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(uno, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(siete, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(33, 33, 33)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cinco, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dos, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ocho, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(parizq, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel2))
-                                .addGap(87, 87, 87)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(num2)
-                                    .addComponent(num1, javax.swing.GroupLayout.PREFERRED_SIZE, 259, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(41, Short.MAX_VALUE))
+                                .addComponent(parder, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(division, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(nueve1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(multiplicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(seis, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(menos, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(tres, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(suma, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,9 +310,35 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addComponent(num2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
-                .addComponent(jButton1)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addGap(37, 37, 37)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tres, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(uno, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dos, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(suma, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cinco, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cuatro, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(seis, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(menos, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(siete, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ocho, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(multiplicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nueve1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cero, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(division, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(parizq, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(parder, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(borrar))
+                .addGap(52, 52, 52))
         );
 
         pack();
@@ -113,6 +346,7 @@ public class GUI extends javax.swing.JFrame {
 
     private void num1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num1ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_num1ActionPerformed
 
     private void num2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num2ActionPerformed
@@ -127,7 +361,6 @@ public class GUI extends javax.swing.JFrame {
         entrada = num1.getText();
         
         try {
-          
             String operacion = entrada;
             Calculadora calc = new Calculadora();
             String resultado = calc.Calcular(operacion);
@@ -139,6 +372,161 @@ public class GUI extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void tresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tresActionPerformed
+        // TODO add your handling code here:
+        
+        try{
+            num1.setText(num1.getText()+"3");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_tresActionPerformed
+
+    private void unoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unoActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"1");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_unoActionPerformed
+
+    private void cuatroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cuatroActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"4");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_cuatroActionPerformed
+
+    private void cincoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cincoActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"5");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_cincoActionPerformed
+
+    private void seisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seisActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"6");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_seisActionPerformed
+
+    private void sieteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sieteActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"7");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_sieteActionPerformed
+
+    private void dosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dosActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"2");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_dosActionPerformed
+
+    private void parizqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parizqActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"(");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_parizqActionPerformed
+
+    private void ochoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ochoActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"8");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_ochoActionPerformed
+
+    private void ceroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ceroActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"0");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_ceroActionPerformed
+
+    private void menosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menosActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"-");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_menosActionPerformed
+
+    private void sumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumaActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"+");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_sumaActionPerformed
+
+    private void multiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicacionActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"*");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_multiplicacionActionPerformed
+
+    private void divisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"/");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_divisionActionPerformed
+
+    private void borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText("");
+            num2.setText("");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_borrarActionPerformed
+
+    private void nueve1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nueve1ActionPerformed
+        // TODO add your handling code here:
+        try{
+            num1.setText(num1.getText()+"9");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_nueve1ActionPerformed
+
+    private void parderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parderActionPerformed
+        // TODO add your handling code here:
+         try{
+            num1.setText(num1.getText()+")");
+        }catch(Exception e){
+            num1.setText("No funciona");
+        }
+    }//GEN-LAST:event_parderActionPerformed
 
     
     
@@ -179,11 +567,28 @@ public class GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton borrar;
+    private javax.swing.JButton cero;
+    private javax.swing.JButton cinco;
+    private javax.swing.JButton cuatro;
+    private javax.swing.JToggleButton division;
+    private javax.swing.JButton dos;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JToggleButton menos;
+    private javax.swing.JToggleButton multiplicacion;
+    private javax.swing.JButton nueve1;
     private javax.swing.JTextField num1;
     private javax.swing.JTextField num2;
+    private javax.swing.JButton ocho;
+    private javax.swing.JButton parder;
+    private javax.swing.JButton parizq;
+    private javax.swing.JButton seis;
+    private javax.swing.JButton siete;
+    private javax.swing.JToggleButton suma;
+    private javax.swing.JButton tres;
+    private javax.swing.JButton uno;
     // End of variables declaration//GEN-END:variables
 }

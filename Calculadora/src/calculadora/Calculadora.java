@@ -59,12 +59,16 @@ public class Calculadora {
                         }
                         catch(Exception e){
                             System.out.println("No funcionó la operación");
+                            resultado ="Se hizo una operación no definida";
                         }
                     }catch(Exception e){
                         System.out.println("No funcionó la conversión a postfijo");
+                        resultado ="No se convirtió bien a postfijo";
+                        
                     }
                 }catch(Exception e){
                     System.out.println("No funcionó la conversión a arreglo de strings");
+                    resultado ="Hay un error de sintaxis";
                 }
             else
                 resultado="No están bien las entradas";
