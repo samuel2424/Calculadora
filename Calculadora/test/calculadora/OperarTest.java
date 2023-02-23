@@ -15,9 +15,9 @@ import static org.junit.Assert.*;
  *
  * @author samuel
  */
-public class PostFijoTest {
+public class OperarTest {
     
-    public PostFijoTest() {
+    public OperarTest() {
     }
     
     @BeforeClass
@@ -34,33 +34,30 @@ public class PostFijoTest {
     
     @After
     public void tearDown() {
-        
     }
 
     /**
-     * Test of PostFijo method, of class PostFijo.
+     * Test of Operar method, of class Operar.
      */
     @Test
-    public void testPostFijo() {
-        System.out.println("PostFijo");
-        String[] cadena = {"2","+","2"};
-        String[] expResult = {"2","2","+"};
-        String[] result = PostFijo.PostFijo(cadena);
-        assertArrayEquals(expResult, result);
+    public void testOperar() {
+        System.out.println("Operar");
+        String[] cadena = {"2","4","+"};
+        double expResult = 6;
+        double result = Operar.Operar(cadena);
+        assertEquals(expResult, result, 0);
         // TODO review the generated test code and remove the default call to fail.
-        
     }
 
     /**
-     * Test of main method, of class PostFijo.
+     * Test of main method, of class Operar.
      */
     @Test
     public void testMain() {
         System.out.println("main");
         String[] args = null;
-        PostFijo.main(args);
+        Operar.main(args);
         // TODO review the generated test code and remove the default call to fail.
-        
     }
     
 }
